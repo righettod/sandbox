@@ -21,4 +21,4 @@ jobs:
           use-verbose-mode: "yes"
           max-depth: 10
           config-file: "./markdown-link-check_config.json"
-      - run: printenv
+      - run: npm config list

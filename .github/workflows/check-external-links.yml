@@ -20,4 +20,6 @@ jobs:
         with:
           node-version: "14"
       - run: npm install -g markdown-link-check
-      - run: find . -name "*.md" -exec markdown-link-check "{}" \;
+      - run: markdown-link-check --version
+      - run: find . -name "*.md" -exec markdown-link-check --verbose --config ./markdown-link-check_config.json "{}" \;
+      - run: echo $?

@@ -15,13 +15,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Setup Action
-        uses: actions/checkout@v2
-      - name: Setup Node runtimme
-        uses: actions/setup-node@v2
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
         with:
           node-version: "14"
-      - name: Install MLC
-        run: npm install -g markdown-link-check
-      - name: Run check
+      - run: npm install -g markdown-link-check
       - run: find . -name '*.md' -maxdepth 10 -exec markdown-link-check '{}' --config ./markdown-link-check_config.json

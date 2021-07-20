@@ -18,7 +18,7 @@ jobs:
       - name: Setup Action
         uses: actions/checkout@v2
       - run: |
-          curl -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:89.0) Gecko/20100101 Firefox/89.0" --head "https://gf.dev/cross-domain-policy-test"
+          curl --http1.1 -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:89.0) Gecko/20100101 Firefox/89.0" --head "https://gf.dev/cross-domain-policy-test"
       - name: Run check
         uses: gaurav-nelson/github-action-markdown-link-check@v1
         with:

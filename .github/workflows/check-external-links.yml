@@ -17,15 +17,11 @@ jobs:
     steps:
       - name: Setup Action
         uses: actions/checkout@v2
-      - run: |
-          curl --http1.1 -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:89.0) Gecko/20100101 Firefox/89.0" --head "https://gf.dev/cross-domain-policy-test"
-          curl --http1.1 -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:89.0) Gecko/20100101 Firefox/89.0" "https://gf.dev/cross-domain-policy-test"
-          curl --http1.1 -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:89.0) Gecko/20100101 Firefox/89.0" --head "https://requestbin.net/r/ffkv1kmp"
-          curl --http1.1 -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:89.0) Gecko/20100101 Firefox/89.0" "https://requestbin.net/r/ffkv1kmp"
-      - name: Run check
-        uses: gaurav-nelson/github-action-markdown-link-check@v1
+      - name: Setup Node runtimme
+        uses: actions/setup-node@v2
         with:
-          use-quiet-mode: "no"
-          use-verbose-mode: "yes"
-          max-depth: 10
-          config-file: "./markdown-link-check_config.json"
+          node-version: "14"
+      - name: Install MLC
+        run: npm install -g markdown-link-check
+      - name: Run check
+      - run: find . -name '*.md' -maxdepth 10 -exec markdown-link-check '{}' --config ./markdown-link-check_config.json

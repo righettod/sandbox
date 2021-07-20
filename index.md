@@ -1,8 +1,13 @@
-# OWASP Secure Headers Project
+---
+title: OWASP Secure Headers Project
+level: 2
+url: https://owasp.org/www-project-secure-headers
+type: documentation
+layout: col-sidebar
+tags: headers
+---
 
-[![OWASP Incubator](https://img.shields.io/badge/owasp-incubator-blue.svg)](https://owasp.org/projects)
-
-The OWASP Secure Headers Project (also named OSHP) describes HTTP response headers that your application can use to increase the security of your application. Once set, these HTTP response headers can restrict modern browsers from running into easily preventable vulnerabilities. The OWASP Secure Headers Project intends to raise awareness and use of these headers.
+The OWASP Secure Headers Project describes HTTP response headers that your application can use to increase the security of your application. Once set, these HTTP response headers can restrict modern browsers from running into easily preventable vulnerabilities. The OWASP Secure Headers Project intends to raise awareness and use of these headers.
 
 ## Introduction
 

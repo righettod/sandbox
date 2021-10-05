@@ -10,6 +10,7 @@
 /rssAll?flavor=rss20
 /rssFailed
 /rssFailed?flavor=rss20
+/rssLatest
 /toggleCollapse?paneId=buildQueue
 /toggleCollapse?paneId=executors
 /user/admin

@@ -33,3 +33,5 @@
 /script
 /securityRealm/
 /systemInfo
+/heapDump
+/threadDump

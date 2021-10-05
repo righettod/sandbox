@@ -18,7 +18,7 @@
 /about
 /administrativeMonitor/OldData/
 /api/
-/cli
+/cli/
 /computer
 /configure
 /configureCredentials

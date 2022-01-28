@@ -1,3 +1,4 @@
-Sandbox to test stuff 😀
+# 🧪 Sandbox to test stuff 🧪
 
-https://righettod.github.io/sandbox/
+* GH page url: https://righettod.github.io/sandbox/
+* GH page depployment dashboard: https://github.com/righettod/sandbox/deployments

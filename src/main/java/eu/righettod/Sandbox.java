@@ -11,6 +11,9 @@ public class Sandbox {
     public static void main(String[] args) throws Exception {
         System.out.printf("Java version: %s\n", System.getProperty("java.version"));
         SchemaFactory factory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
+        if(args.length > 0){
+            factory.newSchema(new File(args[0]));
+        }
         //See https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html
         //factory.setFeature("http://apache.org/xml/features/disallow-doctype-decl", true);
         List<String> testFiles = Arrays.asList("test1.xsd", "test2.xsd");

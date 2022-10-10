@@ -4,4 +4,4 @@
   * <https://righettod.github.io/sandbox/>
 * GH page deployment dashboard:
   * <https://github.com/righettod/sandbox/deployments>
-  * <https://github.com/righettod/sandbox/deployments/activity_log>
+  * <https://github.com/righettod/sandbox/deployments/activity_log?environment=github-pages>

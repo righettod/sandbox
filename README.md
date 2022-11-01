@@ -1,4 +1,4 @@
-# 🧪 Sandbox to test stuff or used during challenges 🧪 
+# 🧪 Sandbox to test stuff or to be used during training challenges 🧪 
 
 
 ## 🌎 URL

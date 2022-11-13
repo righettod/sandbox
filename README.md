@@ -11,4 +11,11 @@
 
 ## 💻 Misc commands
 
-Use `php -S 0.0.0.0:PORT` to start a PHP web listener on [THC disposable server](https://blog.thc.org/disposable-root-servers).
+On a [THC disposable server](https://blog.thc.org/disposable-root-servers) instance, use:
+* `php -S 0.0.0.0:PORT`
+	* Start a PHP server.
+	* You can also use the script [start-webserver.sh](start-webserver.sh) provided.
+* `git clone --depth 1 https://github.com/righettod/sandbox.git`
+	* Clone the repository to use the sandbox anonymously.
+
+

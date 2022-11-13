@@ -1,11 +1,21 @@
-# 🧪 Sandbox to test stuff or to be used during training challenges 🧪 
+# 🧪 Sandbox 🧪
 
+## 🎯 Objectives
+
+> **Note**: Web content is contained and exposed via the folder [docs](docs).
+
+Provide the following elements during online training web challenges/labs.
+
+* A web server supporting HTTP and HTTPS protocols:
+  * HTTPS via GitHub pages features.
+  * HTTP via [THC disposable server](https://blog.thc.org/disposable-root-servers) instance.
+* A network listener via a [THC disposable server](https://blog.thc.org/disposable-root-servers) instance.
 
 ## 🌎 URL
 
-* GH page url:
+* GH pages url:
   * <https://righettod.github.io/sandbox/>
-* GH page deployment dashboard:
+* GH pages deployment dashboard:
   * <https://github.com/righettod/sandbox/deployments>
   * <https://github.com/righettod/sandbox/deployments/activity_log?environment=github-pages>
 

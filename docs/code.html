@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>POC</title>
+</head>
+<body>
+    <div id="render"></div>
+    <script>
+        let socket = new WebSocket("ws://win-h0ka64rd8pt:8060/PNSHandler");
+        socket.onopen = function (e) {console.log("[CONNECTED]");};
+        socket.onmessage = function (event) {console.log("[MESSAGE]:"); console.log(event.data);};
+        socket.onclose = function (event) {console.log("[CLOSE]:"); console.log(event);};
+        socket.onerror = function (error) {console.log("[ERROR]:"); console.log(event);}; 
+    </script>
+</body>
+</html>

@@ -21,6 +21,8 @@ Provide the following elements during online training web challenges/labs.
 
 ## 💻 Misc commands
 
+> **Note**: The port is specified on the line with content `Reverse Port: x.x.x.x:123`.
+
 On a [THC disposable server](https://blog.thc.org/disposable-root-servers) instance, use:
 * `php -S 0.0.0.0:PORT`
 	* Start a PHP server.

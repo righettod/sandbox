@@ -24,7 +24,7 @@ Provide the following elements during online training web challenges/labs.
 > **Note**: The exposed port is specified on the line with content `Reverse Port: x.x.x.x:123` (access the host via the IP on such line).
 
 On a [THC disposable server](https://blog.thc.org/disposable-root-servers) instance, use:
-* `php -S 0.0.0.0:PORT` or `php -S 0.0.0.0:PORT -t docs` 
+* `php -S 0.0.0.0:PORT` or `php -S 0.0.0.0:PORT -t docs` or use the script [start-webserver.sh](start-webserver.sh).
 	* Start a PHP server.
 * `git clone --depth 1 https://github.com/righettod/sandbox.git`
 	* Clone the repository to use the sandbox anonymously.

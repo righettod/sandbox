@@ -29,4 +29,7 @@ On a [THC disposable server](https://blog.thc.org/disposable-root-servers) insta
 * `git clone --depth 1 https://github.com/righettod/sandbox.git`
 	* Clone the repository to use the sandbox anonymously.
 
+## 📦 Misc extra content
+
+* This [GH project](https://github.com/pro-dev-ph/bootstrap-responsive-web-application-template) can be used to have a static sample website.
 

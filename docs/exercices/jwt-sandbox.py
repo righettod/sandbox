@@ -11,11 +11,13 @@ References:
 Run (PowerShell):
     PS> $env:FLASK_ENV = "production"
     PS> $env:FLASK_APP = "jwt-sandbox"
-    PS> flask run --host=localhost --port=8000 --eager-loading --no-reload --no-debugger --with-threads
+    PS> flask run --host=0.0.0.0 --port=8000 --eager-loading --no-reload --no-debugger --with-threads
 """
 import jwt
 import io
 import base64
+import datetime
+from datetime import timezone, timedelta
 from flask import Flask, request, Response, send_file
 
 SECRET = "yolo"
@@ -33,7 +35,10 @@ def get_favicon():
 
 @app.route("/", methods=['GET'])
 def issue_token():
-    encoded = jwt.encode({"UserRole": "BASIC"}, SECRET, algorithm=ALGO)
+    claims = {"exp": datetime.datetime.now(tz=timezone.utc) + timedelta(seconds=600),
+              "UserRole": "BASIC",
+              "aud": ["ctie"]}
+    encoded = jwt.encode(claims, SECRET, algorithm=ALGO)
     content = f"[+] JWT Token:\n{encoded}\n[+] Use POST to validate the token.\n"
     return Response(content, mimetype=MTYPE)
 
@@ -42,17 +47,18 @@ def issue_token():
 def validate_token():
     try:
         token = request.headers.get("X-Token")
-        verify_signature = ("insecure" not in request.args)
+        verify_enabled = ("insecure" not in request.args)
         if token is None or token == "":
             content = f"[+] No token provided into the HTTP request header 'X-Token'.\n"
         else:
             ###
             # ADD VALIDATION VULN HERE
-            decoded = jwt.decode(token, SECRET, algorithms=ALGO, options={"verify_signature": verify_signature})
+            decoded = jwt.decode(token, SECRET, algorithms=ALGO, options={"verify_signature": verify_enabled, "verify_exp": verify_enabled})
             ###
             content = f"[V] Valid token received:\n{str(decoded)}.\n"
     except Exception as e:
         content = f"[X] Invalid token received:\n{str(e)}.\n"
     content += "[+] Add the query parameter insecure=1 to disable the validation of the signature of the token.\n"
-    content += f"[+] Verify signature: {verify_signature}.\n"
+    content += f"[+] Verify signature : {verify_enabled}.\n"
+    content += f"[+] Verify expiration: {verify_enabled}.\n"
     return Response(content, mimetype=MTYPE)

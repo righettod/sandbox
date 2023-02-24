@@ -42,8 +42,9 @@ def issue_token():
               "UserRole": "BASIC",
               "aud": aud}
     encoded = jwt.encode(claims, SECRET, algorithm=ALGO)
-    content = f"[+] JWT Token:\n{encoded}\n[+] Use POST to validate the token.\n"
-    content += "[+] Add the query parameter 'aud' to generate a token with a specific audience.\n"
+    content = f"[+] JWT Token:\n{encoded}\n"
+    content = f"[+] Use POST to validate the token: Add the header 'X-VerifySig' to enable the verification of the signature.\n"
+    content += "[+] Add the query parameter 'aud' to generate a token with a specific audience.\n\n"
     return Response(content, mimetype=MTYPE)
 
 
@@ -55,9 +56,10 @@ def validate_token():
             content = f"[+] No token provided into the HTTP request header 'X-Token'.\n"
         else:
             ###
-            # ADD VALIDATION VULN HERE
+            # Add bug validation
             verify_enabled = False
-            decoded = jwt.decode(token, SECRET, algorithms=ALGO, options={"verify_signature": verify_enabled, "verify_exp": verify_enabled, "verify_aud": verify_enabled})
+            decoded = jwt.decode(token, SECRET, algorithms=ALGO, options={"verify_signature": (
+                request.headers.get("X-VerifySig") is not None), "verify_exp": verify_enabled, "verify_aud": verify_enabled})
             ###
             content = f"[V] Valid token received:\n{str(decoded)}.\n"
     except Exception as e:

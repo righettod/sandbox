@@ -1,0 +1,12 @@
+name: TEST
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test code
+        run: |
+          npx -p @mermaid-js/mermaid-cli mmdc --quiet --input test.mmd --output test.png --outputFormat png --theme default --backgroundColor transparent
+          

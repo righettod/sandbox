@@ -8,5 +8,5 @@ jobs:
       - uses: actions/checkout@v4
       - name: Test code
         run: |
-          npx -p @mermaid-js/mermaid-cli mmdc --quiet --input test.mmd --output test.png --outputFormat png --theme default --backgroundColor transparent
+          aa-exec --profile=chrome npx -p @mermaid-js/mermaid-cli mmdc --quiet --input test.mmd --output test.png --outputFormat png --theme default --backgroundColor transparent
           

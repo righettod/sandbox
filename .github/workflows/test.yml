@@ -8,7 +8,4 @@ jobs:
       - uses: actions/checkout@v4
       - name: Test code
         run: |   
-          GOBIN=/tmp go install github.com/google/osv-scanner/v2/cmd/osv-scanner@latest
-          go env
-          ls -l /tmp
-          find /home/runner -type f          
+          echo "TEST"         

@@ -8,5 +8,6 @@ jobs:
       - uses: actions/checkout@v4
       - name: Test code
         run: |
-          echo "TEST"
+          go install github.com/google/osv-scanner/v2/cmd/osv-scanner@latest
+          go env
           

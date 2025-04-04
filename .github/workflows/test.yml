@@ -7,8 +7,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Test code
-        run: |
-          find /home/runner/go -type f        
-          go install github.com/google/osv-scanner/v2/cmd/osv-scanner@latest
+        run: |   
+          GOBIN=/tmp go install github.com/google/osv-scanner/v2/cmd/osv-scanner@latest
           go env
-          find /home/runner/go -type f          
+          ls -l /tmp
+          find /home/runner -type f          

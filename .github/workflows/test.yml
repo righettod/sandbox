@@ -10,4 +10,5 @@ jobs:
         run: |
           go install github.com/google/osv-scanner/v2/cmd/osv-scanner@latest
           go env
+          find -type f /home/runner/go
           

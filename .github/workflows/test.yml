@@ -5,7 +5,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: righettod/checkout@latest
+      - uses: righettod/checkout@v1
       - name: Test code
         run: |   
           echo "TEST"         

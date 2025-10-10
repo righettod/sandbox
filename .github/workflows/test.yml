@@ -8,4 +8,4 @@ jobs:
     - uses: actions/checkout@v4
     - name: Test code
       run: |   
-        echo "TEST"        
+        sudo apt install -y file pdfgrep dos2unix    

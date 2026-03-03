@@ -17,4 +17,5 @@ RUN echo "set -g mouse on" > /righettod/.tmux.conf
 RUN chmod -R 775 /righettod
 RUN chmod -R 755 /righettod/.oh-my-zsh
 ENV PATH="$PATH:/righettod/go/bin"
+WORKDIR /righettod
 CMD ["/bin/bash", "/container-launcher.sh"]

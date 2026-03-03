@@ -1,4 +1,4 @@
-FROM alpine:3.19
+FROM alpine:3
 RUN apk add --no-cache curl wget ca-certificates bash zsh git nano vim tmux nmap nmap-scripts whois ttyd grep httpie netcat-openbsd py3-setuptools py3-virtualenv python3 python3-dev py3-pip
 RUN mkdir /righettod
 RUN adduser -D -h /righettod -G root righettod

@@ -1,4 +1,4 @@
-name: Build and deploy the toolbox image
+name: Build and deploy the image
 env:
   IMAGE_NAME: "righettod/sandbox"
   REGISTRY: ghcr.io

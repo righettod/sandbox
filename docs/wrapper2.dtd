@@ -1,0 +1,4 @@
+<!ENTITY % start "<![CDATA[">
+<!ENTITY % end "]]>">
+<!ENTITY % wrap "<!ENTITY all '%start;%file;%end;'>">
+%wrap;
